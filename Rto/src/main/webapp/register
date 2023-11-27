@@ -1,0 +1,267 @@
+<script type="text/javascript">
+	function validateFname() {
+
+		console.log("Name function is running")
+		const button = document.getElementById('button')
+		const fname = document.getElementById('inputFname').value
+		console.log(fname)
+		console.log(fname.length)
+
+		if (fname.length>3 && fname.length <= 30) {
+
+			document.getElementById("nameErr").innerHTML = "<span style='color:green'>fName is valid</span>"
+			button.removeAttribute("disabled")
+
+		} else {
+
+			document.getElementById("nameErr").innerHTML = "<span style='color:red'>fName is Invalid</span>"
+			button.setAttribute("disabled", "")
+		}
+
+	}
+	function validateMname() {
+
+		console.log("Name function is running")
+		const button = document.getElementById('button')
+		const mname = document.getElementById('inputMname').value
+		console.log(mname)
+		console.log(mname.length)
+
+		if (mname.length >=2 && mname.length <= 30) {
+
+			document.getElementById("mnameErr").innerHTML = "<span style='color:green'>MName is valid</span>"
+			button.removeAttribute("disabled")
+
+		} else {
+
+			document.getElementById("mnameErr").innerHTML = "<span style='color:red'>MName is Invalid</span>"
+			button.setAttribute("disabled", "")
+		}
+
+	}
+	function validateLname() {
+
+		console.log("Name function is running")
+		const button = document.getElementById('button')
+		const lname = document.getElementById('inputLname').value
+		console.log(lname)
+		console.log(lname.length)
+
+		if (lname.length > 3 && lname.length <= 30) {
+
+			document.getElementById("lnameErr").innerHTML = "<span style='color:green'>LName is valid</span>"
+			button.removeAttribute("disabled")
+
+		} else {
+
+			document.getElementById("lnameErr").innerHTML = "<span style='color:red'>LName is Invalid</span>"
+			button.setAttribute("disabled", "")
+		}
+
+	}
+
+	function validateCountry() {
+
+		console.log("Name function is running")
+		const button = document.getElementById('button')
+		const country = document.getElementById('inputCountry').value
+
+		if (country.length > 3 && country.length <= 100) {
+
+			document.getElementById("countryErr").innerHTML = "<span style='color:green'>country is valid</span>"
+			button.removeAttribute("disabled")
+
+		} else {
+
+			document.getElementById("countryErr").innerHTML = "<span style='color:red'>country is Invalid</span>"
+			button.setAttribute("disabled", "")
+		}
+
+	}
+	function  validateAge(){
+
+		console.log("Name function is running")
+		const button = document.getElementById('button')
+		const age = document.getElementById('inputAge').value
+
+		if (age!=0 && age>=18) {
+
+			document.getElementById("ageErr").innerHTML = "<span style='color:green'>Age is valid</span>"
+			button.removeAttribute("disabled")
+
+		} else {
+
+			document.getElementById("ageErr").innerHTML = "<span style='color:red'>Age is Invalid</span>"
+			button.setAttribute("disabled", "")
+		}
+
+	}
+	
+ 	function  validateQualification(){
+
+		console.log("Name function is running")
+		const button = document.getElementById('button')
+		const qualification = document.getElementById('inputQualification').value
+
+		if (qualification.length>=2 && qualification.length <= 100) {
+
+			document.getElementById("qualificationErr").innerHTML = "<span style='color:green'>qualification is valid</span>"
+			button.removeAttribute("disabled")
+
+		} else {
+
+			document.getElementById("qualificationErr").innerHTML = "<span style='color:red'>qualification is Invalid</span>"
+			button.setAttribute("disabled", "")
+		}
+
+	}
+ 	
+ 	function validatePlaceOfBirth(){
+
+		console.log("Name function is running")
+		const button = document.getElementById('button')
+		const placeOfBirth = document.getElementById('inputPlaceOfBirth').value
+
+		if (placeOfBirth.length>3 && placeOfBirth<120) {
+
+			document.getElementById("placeOfBirthErr").innerHTML = "<span style='color:green'>placeOfBirth is valid</span>"
+			button.removeAttribute("disabled")
+
+		} else {
+
+			document.getElementById("placeOfBirthErr").innerHTML = "<span style='color:red'>placeOfBirth is Invalid</span>"
+			button.setAttribute("disabled", "")
+		}
+
+	}
+ 	
+ 	function validateRtoLocation(){
+
+		console.log("Name function is running")
+		const button = document.getElementById('button')
+		const rtoLocation= document.getElementById('inputRtoLocation').value
+
+		if (rtoLocation.length>3 && rtoLocation.length<120) {
+
+			document.getElementById("rtoLocationErr").innerHTML = "<span style='color:green'>rtoLocation is valid</span>"
+			button.removeAttribute("disabled")
+
+		} else {
+
+			document.getElementById("rtoLocationErr").innerHTML = "<span style='color:red'>rtoLocation is Invalid</span>"
+			button.setAttribute("disabled", "")
+		}
+
+	}
+ 		
+ 		function validatePinCode() {
+
+ 			console.log("Name function is running")
+ 			const button = document.getElementById('button')
+ 			const pinCode= document.getElementById('inputPinCode').value
+
+ 			if (pinCode!=0) {
+
+ 				document.getElementById("pinCodeErr").innerHTML = "<span style='color:green'>pinCode is valid</span>"
+ 				button.removeAttribute("disabled")
+
+ 			} else {
+
+ 				document.getElementById("pinCodeErr").innerHTML = "<span style='color:red'>pinCode is Invalid</span>"
+ 				button.setAttribute("disabled", "")
+ 			}
+
+ 		}
+ 		
+ 		function validateEmail(){
+ 		    const em = document.getElementById('inputEmail').value;
+ 		    const button = document.getElementById('button');
+ 		    if (em.match(/^[a-z]+@[a-z]+\.[a-z]{3}$/)) {
+ 		      document.getElementById("emailErr").innerHTML = "<span style='color: green'>Email is valid</span>";
+ 		      button.removeAttribute("disabled");
+ 		   
+ 		    } else {
+ 		      document.getElementById("emailErr").innerHTML = "<span style='color: red'>Invalid Email format</span>";
+ 		      button.setAttribute("disabled", "");
+ 		    }
+ 		  	
+ 	}
+ 		
+ 		function validatePhoneNo(){
+ 			
+ 		    console.log("Number function is running")
+ 		    const button = document.getElementById('button')
+ 		    const phoneNo = document.getElementById('inputPhoneNo').value
+ 		   
+ 		    if(phoneNo==10){
+ 		    	
+ 		    	document.getElementById("phoneNoErr").innerHTML="<span style='color:green'>phoneNo is valid</span>"
+ 		    	button.removeAttribute("disabled")
+ 		   
+ 		    }else{
+ 		    	
+ 		    	document.getElementById("phoneNoErr").innerHTML="<span style='color:red'>phoneNo is Invalid</span>"
+ 		        button.setAttribute("disabled","")
+
+ 		    }
+ 		  
+ 		}
+ 		
+ 		function validateAadharNo() {
+
+ 		   console.log("Number function is running")
+		    const button = document.getElementById('button')
+		    const aadharNo = document.getElementById('inputAadharNo').value
+		    
+		    if(aadharNo!=0 && aadharNo==12){
+		    	
+		    	document.getElementById("aadharNoErr").innerHTML="<span style='color:green'>aadharNo is valid</span>"
+		    	button.removeAttribute("disabled")
+		   
+		    }else{
+		    	
+		    	document.getElementById("aadharNoErr").innerHTML="<span style='color:red'>aadharNo is Invalid</span>"
+		        button.setAttribute("disabled","")
+
+		    }
+
+ 		}
+ 		
+ 		function validatePermanentAddress() {
+
+ 			console.log("Name function is running")
+ 			const button = document.getElementById('button')
+ 			const permanentAddress = document.getElementById('inputPermanentAddress').value
+
+ 			if (permanentAddress.length > 3 && permanentAddress.length <= 100) {
+
+ 				document.getElementById("permanentAddressErr").innerHTML = "<span style='color:green'>PermanentAddress is valid</span>"
+ 				button.removeAttribute("disabled")
+
+ 			} else {
+
+ 				document.getElementById("permanentAddressErr").innerHTML = "<span style='color:red'>PermanentAddress is Invalid</span>"
+ 				button.setAttribute("disabled", "")
+ 			}
+
+ 		}
+ 		
+		
+ 		function validateCurrentAddress() {
+
+ 			console.log("Name function is running")
+ 			const button = document.getElementById('button')
+ 			const currentAddress = document.getElementById('inputCurrentAddress').value
+
+ 			if (currentAddress.length > 3 && currentAddress.length <= 100) {
+
+ 				document.getElementById("currentAddressErr").innerHTML = "<span style='color:green'>currentAddress is valid</span>"
+ 				button.removeAttribute("disabled")
+
+ 			} else {
+
+ 				document.getElementById("currentAddressErr").innerHTML = "<span style='color:red'>currentAddress is Invalid</span>"
+ 				button.setAttribute("disabled", "")
+ 			}
+
+ 		}

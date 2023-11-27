@@ -3,35 +3,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
 	crossorigin="anonymous">
-</head>
-<style>
-html,body{
-    height:100%;
-    box-sizing:border-box;
+<meta charset="ISO-8859-1">
+<title>ApplicationStatus</title>
+<style type="text/css">
+html, body {
+	height: 100%;
+	box-sizing: border-box;
 }
-footer{
-overflow:auto;
-padding-bottom:100px;
-position:relative;
-height:100%;
-margin-top: 500px;
-clear:both;
-box-sizing:inherit;
+
+footer {
+	overflow: auto;
+	padding-bottom: 100px;
+	position: relative;
+	height: 100%;
+	margin-top: 500px;
+	clear: both;
+	box-sizing: inherit;
 }
-h4{
-text-align: center;
-color: red;
+li{
+margin-left: 10px;
+
 }
+
+
+
 </style>
+</head>
 <body>
-       <nav class="navbar navbar-expand-lg bg-warning">
+
+          	<nav class="navbar navbar-expand-lg bg-warning">
 		<div class="container-fluid">
 
 			<a class="navbar-brand" href="#"> <img
@@ -46,47 +51,54 @@ color: red;
 
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="index.jsp">Home</a></li>
+						
+						<li class="nav-item"><a class="nav-link active"
+						 aria-current="page" href="Admin.jsp">Admin</a></li>
 
 				</ul>
-
+                 
 				<ul class="nav nav-pills nav-fill nav justify-content-end">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="SignIn.jsp">SignOut</a></li>
-				</ul>
+						aria-current="page" href="Register.jsp">LLRRegister</a></li>
+						
+						</ul>
+						
 
+
+					<ul class="nav nav-pills nav-fill nav justify-content-end">
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="index.jsp">SignOut</a></li>
+							</ul>
 			</div>
+		</div>
 	</nav>
-     	
-	<form class="form" action="signIn" method="get">
+ 
+ 	<h3 style="text-align: center">UserLogin</h3>
+
+	<form class="form" action="userLogin" method="get">
 
 		<div class="container w-50 border border-dark border-5 mt-5">
-		
-		     	<h3 style="text-align: center">SIGN IN</h3>
-		
-     	    <h4>${message}</h4>
-			<div class="mb-3">
-				<label class="form-label">Email</label> <input type="email"
-					class="form-control" placeholder="email" name="email"
+
+             <div class="mb-3">
+				<label class="form-label">PhoneNo/ApplicationNo</label> <input type="text"
+					class="form-control" placeholder="enter applicationNo or phoneNo" name=appNoorphoneNo
 					required="required">
 			</div>
 
 			<div class="mb-3">
-				<label class="form-label">Password</label> <input type="PassWord"
-					class="form-control" placeholder="password" name="passWord"
+				<label class="form-label">Dob</label> <input type="date"
+					class="form-control" placeholder="email" name="dob"
 					required="required">
 			</div>
 
 
-			<br><input type="submit" value="signIn" class="btn btn-success">
-                 <input type="submit" value="back" class="btn btn-success">
+			<br> <input type="submit" value="Sumbit" class="btn btn-success">
+			<input type="submit" value="back" class="btn btn-success">
+			
 		</div>
 	</form>
-	
-	</body>
-
-    <div id="footer">
-		<%@include file="footer.jsp"%>
-	</div>
-	
- 
+</body>
+<div id="footer">
+	<%@include file="footer.jsp"%>
+</div>
 </html>

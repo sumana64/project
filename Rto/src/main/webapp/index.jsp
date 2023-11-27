@@ -36,6 +36,7 @@ margin-left: 10px;
 </style>
 </head>
 <body>
+   
 	<img
 		src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Seal_of_Karnataka.svg/800px-Seal_of_Karnataka.svg.png"
 		class="centerImage" alt="logo" width="100" height="100">
@@ -44,7 +45,9 @@ margin-left: 10px;
 		<h3>Transport Department</h3>
 		<h6>Government of Karnataka</h6>
 	</div>
-	<br>
+	<br> 
+	
+	<form action = "rto" method="get">
 	<nav class="navbar navbar-expand-lg bg-warning">
 		<div class="container-fluid">
 
@@ -65,6 +68,18 @@ margin-left: 10px;
 						 aria-current="page" href="Admin.jsp">Admin</a></li>
 
 				</ul>
+				
+				<ul class="nav nav-pills nav-fill nav justify-content-end">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="Register.jsp">LLRRegister</a></li>
+						
+						</ul>
+						
+				<ul class="nav nav-pills nav-fill nav justify-content-end">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="ApplicationStatus.jsp">ApplicationStatus</a></li>
+						
+						</ul>
                  
 				<ul class="nav nav-pills nav-fill nav justify-content-end">
 					<li class="nav-item"><a class="nav-link active"
@@ -81,6 +96,7 @@ margin-left: 10px;
 			</div>
 		</div>
 	</nav>
+	</form>
 </body>
 <div>
 	

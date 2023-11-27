@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,26 +14,27 @@
 	crossorigin="anonymous">
 </head>
 <style>
-html,body{
-    height:100%;
-    box-sizing:border-box;
+html, body {
+	height: 100%;
+	box-sizing: border-box;
 }
-footer{
-overflow:auto;
-padding-bottom:-400px;
-position:relative;
-height:100%;
-margin-top: 500px;
-clear:both;
-box-sizing:inherit;
-}
-li{
-margin-left:10px;
 
+footer {
+	overflow: auto;
+	padding-bottom: -400px;
+	position: relative;
+	height: 100%;
+	margin-top: 500px;
+	clear: both;
+	box-sizing: inherit;
+}
+
+li {
+	margin-left: 10px;
 }
 </style>
 <body>
-<nav class="navbar navbar-expand-lg bg-warning">
+	<nav class="navbar navbar-expand-lg bg-warning">
 		<div class="container-fluid">
 
 			<a class="navbar-brand" href="#"> <img
@@ -46,27 +49,27 @@ margin-left:10px;
 
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="index.jsp">Home</a></li>
-						
-						</ul>
-						
-						
-					 <ul class="nav nav-pills nav-fill nav justify-content-end">
+
+				</ul>
+
+
+				<ul class="nav nav-pills nav-fill nav justify-content-end">
 					<li><h3>${dto.firstName}</h3></li>
-						
-						</ul>
-							
-						<ul class="nav nav-pills nav-fill nav justify-content-end">
-						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="SignIn.jsp">SignOut</a></li>
-							</ul>
-				          
-				
-				</div>
-				</nav>
-				
-	<div style = "text-align": center;">
-		<table class= "table" border=1>	
-		<tbody>
+
+				</ul>
+
+				<ul class="nav nav-pills nav-fill nav justify-content-end">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="SignIn.jsp">SignOut</a></li>
+				</ul>
+
+
+			</div>
+	</nav>
+
+	<div style="":center;">
+		<table class="table" border=1>
+			<tbody>
 				<tr>
 					<th scope="col">firstName</th>
 					<th scope="col">lastName</th>
@@ -78,25 +81,69 @@ margin-left:10px;
 					<th scope="col">passWord</th>
 					<th scope="col">confirmPassWord</th>
 				</tr>
-			<tr>
+				<tr>
 
-				<td>${dto.firstName}</td>
-				<td>${dto.lastName}</td>
-				<td>${dto.dob}</td>
-				<td>${dto.phoneNo}</td>
-				<td>${dto.email}</td>
-				<td>${dto.state}</td>
-				<td>${dto.district}</td>
-				<td>${dto.passWord}</td>
-				<td>${dto.confirmPassWord}</td>
-			</tr>
+					<td>${dto.firstName}</td>
+					<td>${dto.lastName}</td>
+					<td>${dto.dob}</td>
+					<td>${dto.phoneNo}</td>
+					<td>${dto.email}</td>
+					<td>${dto.state}</td>
+					<td>${dto.district}</td>
+					<td>${dto.passWord}</td>
+					<td>${dto.confirmPassWord}</td>
+				</tr>
 			</tbody>
 		</table>
+		<br>
+		<h3 span style="text-align: center">User Details</h3>
 
+		<div style="":center;">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th scope="col">firstName</th>
+						<th scope="col">lastName</th>
+						<th scope="col">middleName</th>
+						<th scope="col">phoneNo</th>
+						<th scope="col">email</th>
+						<th scope="col">permanentAddress</th>
+						<th scope="col">state</th>
+						<th scope="col">status></th>
+						<th scope="col">updatedmessage</th>
+
+
+
+					</tr>
+					<tr>
+						<c:forEach items="${dto1}" var="dto1">
+							<td>${dto1.fname}</td>
+							<td>${dto1.lname}</td>
+							<td>${dto1.mname}</td>
+							<td>${dto1.phoneNo}</td>
+							<td>${dto1.email}</td>
+							<td>${dto1.permanentAddress}</td>
+							<td>${dto1.state}</td>
+						<!--<td><input type="text" name="status1">
+							 <select class="form-select" name="status2"
+								aria-label="Default select example">
+									<option selected>status</option>
+									<option value="approve">Approve</option>
+									<option value="pending">NotApproved</option>
+									<input type="submit">
+							</select></td> -->
+							<td><a href = updateStatus?id=${dto1.id}>Approve</a></td>
+							<td>${message1}</td>
+					</tr>
+					</c:forEach>
+
+				</tbody>
+			</table>
+		</div>
 </body>
-         <footer>
-         <div class = "footer">
-         <%@include file= "footer.jsp" %>
-         </div>
-         </footer>
+<footer>
+	<div class="footer">
+		<%@include file="footer.jsp"%>
+	</div>
+</footer>
 </html>

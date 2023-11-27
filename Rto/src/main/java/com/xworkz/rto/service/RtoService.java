@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.validation.ConstraintViolation;
 
 import com.xworkz.rto.dto.RtoDto;
+import com.xworkz.rto.dto.UserDto;
 
 public interface RtoService {
 	
@@ -17,5 +18,11 @@ public interface RtoService {
 	
 	public List<RtoDto> findByState(String state);
 	
+	public abstract Set<ConstraintViolation<UserDto>> onSave(UserDto dto);
 	
+	public List<UserDto> searchByState(String state);
+
+	public UserDto userLogin(String appNoorphoneNo,String dob);
+	
+	public abstract boolean updateById(int id);
 }

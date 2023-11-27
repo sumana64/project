@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,28 +11,28 @@
 	rel="stylesheet"
 	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
 	crossorigin="anonymous">
-</head>
-<style>
-html,body{
-    height:100%;
-    box-sizing:border-box;
+	html, body {
+	height: 100%;
+	box-sizing: border-box;
 }
-footer{
-overflow:auto;
-padding-bottom:100px;
-position:relative;
-height:100%;
-margin-top: 500px;
-clear:both;
-box-sizing:inherit;
+<style type="text/css">footer {
+	overflow: auto;
+	padding-bottom: -400px;
+	position: relative;
+	height: 100%;
+	margin-top: 500px;
+	clear: both;
+	box-sizing: inherit;
 }
-h4{
-text-align: center;
-color: red;
+
+li {
+	margin-left: 10px;
 }
 </style>
+</head>
 <body>
-       <nav class="navbar navbar-expand-lg bg-warning">
+
+          	<nav class="navbar navbar-expand-lg bg-warning">
 		<div class="container-fluid">
 
 			<a class="navbar-brand" href="#"> <img
@@ -46,47 +47,69 @@ color: red;
 
 					<li class="nav-item"><a class="nav-link active"
 						aria-current="page" href="index.jsp">Home</a></li>
+						
+						<li class="nav-item"><a class="nav-link active"
+						 aria-current="page" href="Admin.jsp">Admin</a></li>
 
 				</ul>
-
+                 
 				<ul class="nav nav-pills nav-fill nav justify-content-end">
 					<li class="nav-item"><a class="nav-link active"
-						aria-current="page" href="SignIn.jsp">SignOut</a></li>
-				</ul>
+						aria-current="page" href="Register.jsp">LLRRegister</a></li>
+						
+						</ul>
+						
 
+
+					<ul class="nav nav-pills nav-fill nav justify-content-end">
+						<li class="nav-item"><a class="nav-link active"
+							aria-current="page" href="index.jsp">SignOut</a></li>
+							</ul>
 			</div>
-	</nav>
-     	
-	<form class="form" action="signIn" method="get">
-
-		<div class="container w-50 border border-dark border-5 mt-5">
-		
-		     	<h3 style="text-align: center">SIGN IN</h3>
-		
-     	    <h4>${message}</h4>
-			<div class="mb-3">
-				<label class="form-label">Email</label> <input type="email"
-					class="form-control" placeholder="email" name="email"
-					required="required">
-			</div>
-
-			<div class="mb-3">
-				<label class="form-label">Password</label> <input type="PassWord"
-					class="form-control" placeholder="password" name="passWord"
-					required="required">
-			</div>
-
-
-			<br><input type="submit" value="signIn" class="btn btn-success">
-                 <input type="submit" value="back" class="btn btn-success">
 		</div>
-	</form>
+	</nav>
 	
-	</body>
+	
+	<div style="":center;">
+		<table class="table" border=1>
+			<tbody>
+				<tr>
+					<th scope="col">fname</th>
+					<th scope="col">mname</th>
+					<th scope="col">lname</th>
+					<th scope="col">gender</th>
+					<th scope="col">state</th>
+					<th scope="col">country</th>
+					<th scope="col">dob</th>
+					<th scope="col">email</th>
+					<th scope="col">phoneNo</th>
+                    <th scope="col">permanentAddress</th>
+					<th scope="col">registeredTime</th>
+					<th scope="col">applicationNo</th>
+					<th scope="col">status</th>
+				</tr>
+				<tr>
 
-    <div id="footer">
+					<td>${dto.fname}</td>
+					<td>${dto.mname}</td>
+					<td>${dto.lname}</td>
+					<td>${dto.gender}</td>
+					<td>${dto.state}</td>
+					<td>${dto.country}</td>
+					<td>${dto.dob}</td>
+					<td>${dto.email}</td>
+					<td>${dto.phoneNo}</td>
+					<td>${dto.permanentAddress}</td>
+					<td>${dto.registeredTime}</td>
+				    <td>${dto.applicationNo}</td>
+				    <td>${dto.status}</td>
+					
+				</tr>
+			</tbody>
+		</table>
+
+</body>
+<div class="footer">
 		<%@include file="footer.jsp"%>
 	</div>
-	
- 
 </html>
